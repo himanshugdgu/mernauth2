@@ -8,6 +8,7 @@ const signup = async (req, res, next) => {
   } catch (err) {
     console.log(err);
   }
+  
   if (existingUser) {
     return res.status(422).json({ message: "User already exists!" });
   }
